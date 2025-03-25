@@ -13,6 +13,11 @@ services:
       - PYTHONPATH=/app:/app/api
       - USE_GPU=true
       - PYTHONUNBUFFERED=1
+      - API_HOST=0.0.0.0
+      - API_PORT=8880
+      - MODEL_DIR=src/models
+      - VOICES_DIR=src/voices/v1_0
+      - WEB_PLAYER_PATH=/app/web
     deploy:
       resources:
         reservations:
@@ -31,6 +36,13 @@ services:
   #     - "7860:7860"
   #   volumes:
   #     - ../../ui/data:/app/ui/data
+  #     - ../../ui/app.py:/app/app.py  # Mount app.py for hot reload
+  #   environment:
+  #     - GRADIO_WATCH=1  # Enable hot reloading
+  #     - PYTHONUNBUFFERED=1  # Ensure Python output is not buffered
+  #     - DISABLE_LOCAL_SAVING=false  # Set to 'true' to disable local saving and hide file view
+  #     - API_HOST=kokoro-tts  # Set TTS service URL
+  #     - API_PORT=8880  # Set TTS service PORT
   #     - ../../ui/app.py:/app/app.py  # Mount app.py for hot reload
   #   environment:
   #     - GRADIO_WATCH=1  # Enable hot reloading

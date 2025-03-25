@@ -139,6 +139,56 @@ with client.audio.speech.with_streaming_response.create(
 
 </details>
 
+<details>
+<summary>Launch on Google Colab</summary>
+
+1. **Fork the Repository**: Fork this repository to your GitHub account.
+
+2. **Create a GitHub Workflow**:
+   - Add a new GitHub workflow file `.github/workflows/colab-launch.yml` with the following content:
+     ```yaml
+     name: Launch on Google Colab
+
+     on:
+       workflow_dispatch:
+
+     jobs:
+       launch-colab:
+         runs-on: ubuntu-latest
+         steps:
+           - name: Checkout repository
+             uses: actions/checkout@v4
+
+           - name: Set up Python
+             uses: actions/setup-python@v4
+             with:
+               python-version: '3.10'
+
+           - name: Install dependencies
+             run: |
+               python -m pip install --upgrade pip
+               pip install -r requirements.txt
+
+           - name: Launch on Google Colab
+             run: |
+               python -m pip install colabcode
+               python -m colabcode --port 8880 --password your_password
+
+           - name: Output API URL
+             run: |
+               echo "API URL: http://localhost:8880"
+     ```
+
+3. **Trigger the Workflow**:
+   - Go to the "Actions" tab in your GitHub repository.
+   - Select the "Launch on Google Colab" workflow.
+   - Click on "Run workflow" to trigger the workflow.
+
+4. **Obtain the API URL**:
+   - Once the workflow completes, it will output the API URL.
+   - Use this URL in your local SillyTavern instance to connect to the FastAPI server running on Google Colab.
+
+</details>
 
 ## Features 
 <details>
