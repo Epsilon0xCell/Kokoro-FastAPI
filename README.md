@@ -190,6 +190,20 @@ with client.audio.speech.with_streaming_response.create(
 
 </details>
 
+<details>
+<summary>Launch on Google Colab using Jupyter Notebook</summary>
+
+1. **Open the Jupyter Notebook**:
+   - Open the `launch_kokoro.ipynb` file in your Jupyter environment.
+
+2. **Run the Notebook**:
+   - Execute each cell in the notebook to fetch the Docker image, launch it, and obtain the API URL.
+
+3. **Use the API URL**:
+   - Use the provided API URL in your local SillyTavern instance to connect to the FastAPI server running on Google Colab.
+
+</details>
+
 ## Features 
 <details>
 <summary>OpenAI-Compatible Speech Endpoint</summary>
