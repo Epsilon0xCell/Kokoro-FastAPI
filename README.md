@@ -1,3 +1,7 @@
+![Kokoro-FastAPI banner: a dark broadcast desk with a silver microphone at center, a neat stack of plain manuscript pages on its left, a speaker cone on its right rippling with amber rings, red accent light in the charcoal background](banner.png)
+
+<p align="center"><img src="logo.png" alt="Kokoro-FastAPI logo: a classic studio microphone photographed close in silver and charcoal, a warm amber sound ring glowing around its head like a voice leaving it, one small on-air red dot above" width="200"></p>
+
 <p align="center">
   <img src="githubbanner.png" alt="Kokoro TTS Banner">
 </p>
